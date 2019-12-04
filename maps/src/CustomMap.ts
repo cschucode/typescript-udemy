@@ -31,7 +31,7 @@ export class CustomMap {
                 lng: mappable.location.lng,
             }
         });
-    })
+    }
 
     // addUserMarker(user: User) {
     //     new google.maps.Marker({
