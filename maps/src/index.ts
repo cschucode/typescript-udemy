@@ -1,14 +1,14 @@
-// import { User } from './User';
-// import { Company } from './Company';
+import { User } from './User';
+import { Company } from './Company';
+import { CustomMap } from './CustomMap';
 
-function initialize() {
-   new google.maps.Map(document.getElementById('map'), {
-        zoom: 1,
-        center: {
-            lat: 0,
-            lng: 0
-        } 
-    });
+ function initialize() {
+    const user = new User();
+    const company = new Company();
+    const customMap = new CustomMap('map');
+
+    customMap.addMarker(user);
+    customMap.addMarker(company);
 }
 
 google.maps.event.addDomListener(window, "load", initialize);
